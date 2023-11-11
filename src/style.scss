@@ -13,10 +13,8 @@
       background-color: var(--#{$name});
     }
   }
-  @if ($name != "background") {
-    .color-#{$name} {
-      background-color: var(--#{$name});
-    }
+  .color-#{$name} {
+    color: var(--#{$name});
   }
 }
 
