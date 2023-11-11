@@ -1,0 +1,31 @@
+@use "colors.scss" as *;
+@use "font-weights.scss" as *;
+@use "sass:map";
+
+root {
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
+}
+
+@each $name, $color in $colors {
+  @if ($name != "text") {
+    .bg-#{$name} {
+      background-color: var(--#{$name});
+    }
+  }
+  @if ($name != "background") {
+    .color-#{$name} {
+      background-color: var(--#{$name});
+    }
+  }
+}
+
+@each $name, $map in $fonts {
+  @each $weight in map.get($map, "weights") {
+        .ft-#{$name}-#{$weight} {
+            font-family: '#{map.get($map, "family")}, #{map.get($map, "fallback")}';
+            font-weight: #{$weight};
+        }
+    }
+}
