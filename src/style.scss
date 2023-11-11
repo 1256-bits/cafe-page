@@ -1,6 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=playfair-display:400,400i,500,500i,600,600i,700,700i);
 @use "colors.scss" as *;
-@use "font-weights.scss" as *;
-@use "sass:map";
 
 :root {
   @each $name, $color in $colors {
@@ -21,11 +20,13 @@
   }
 }
 
-@each $name, $map in $fonts {
-  @each $weight in map.get($map, "weights") {
-        .ft-#{$name}-#{$weight} {
-            font-family: '#{map.get($map, "family")}, #{map.get($map, "fallback")}';
-            font-weight: #{$weight};
-        }
-    }
+$weights: 400, 500, 700, 900;
+@each $weight in $weights {
+  .fw-#{$weight} {
+    font-weight: $weight;
+  }
+}
+
+.italic {
+  font-style: italic;
 }
