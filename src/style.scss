@@ -1,5 +1,5 @@
 @use "colors.scss" as *;
-@import url(https://fonts.bunny.net/css?family=playfair-display:400,400i,500,500i,600,600i,700,700i);
+@import url(https://fonts.bunny.net/css?family=playfair-display:400,400i,500,500i,600,600i,700,700i|source-sans-pro:400,400i,600,600i,700,700i);
 
 :root {
   @each $name, $color in $colors {
@@ -29,4 +29,19 @@ $weights: 400, 500, 700, 900;
 
 .italic {
   font-style: italic;
+}
+
+.ft-main {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.ft-accent {
+  font-family: "Playfair Display", serif;
+}
+
+.center {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
 }
