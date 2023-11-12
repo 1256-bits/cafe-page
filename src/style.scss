@@ -1,5 +1,6 @@
 @use "colors.scss" as *;
 @use "font-classes.scss";
+@use "header.scss";
 @import url(https://fonts.bunny.net/css?family=playfair-display:400,400i,500,500i,600,600i,700,700i|source-sans-pro:400,400i,600,600i,700,700i);
 
 :root {
@@ -19,7 +20,8 @@
   }
 }
 
-h1 {
+h1,
+p {
   margin: 0;
 }
 
@@ -27,27 +29,6 @@ h1 {
     display: grid;
 }
 
-.header {
-  background: url("./header.avif") 0% 86%;
-  font-size: 2rem;
-  padding: 1rem;
-  grid-template-columns: 3fr repeat(4, 1fr);
-}
-
-.header > nav {
-  grid-template-columns: subgrid;
-  grid-column: 2/5;
-  place-items: center;
-}
-
-.tab-header {
-  font-size: 1.5rem;
-  /* appearance: none;
-  padding: 0;
-  background: none;
-  border: none;
-  color: inherit;
-  font-weight: inherit;
-  cursor: pointer;
-    */
+.footer {
+  padding: 0.5rem;
 }
