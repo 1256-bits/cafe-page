@@ -1,6 +1,7 @@
 @use "styles/colors.scss" as *;
 @use "styles/font-classes.scss";
 @use "styles/header.scss";
+@use "styles/about.scss";
 @import url(https://fonts.bunny.net/css?family=playfair-display:400,400i,500,500i,600,600i,700,700i|source-sans-pro:400,400i,600,600i,700,700i);
 
 :root {
@@ -51,20 +52,4 @@ li {
 .main {
   padding-block: 1rem;
   margin: auto;
-}
-
-.tab {
-  width: 70ch;
-  margin: auto;
-  border: 5px solid var(--accent);
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-}
-
-.section {
-  margin-top: 0.5em;
-}
-
-.schedule {
-    line-height: 1.5rem;
 }
