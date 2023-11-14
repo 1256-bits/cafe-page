@@ -1,6 +1,8 @@
 import "normalize.css"
 import "./style.scss"// import after normalize.css to prevent overwriting
 import createAboutTab from "./components/about.js"
+import createTestimonials from "./components/testimonials.js"
+import createThanks from "./components/thanks.js"
 
 const main = document.querySelector("main");
 const about = document.getElementById("about-us");
@@ -12,9 +14,9 @@ about.addEventListener("click", () => {
 });
 
 testimonials.addEventListener("click", () => {
-  //createTestimonials()
+  createTestimonials()
 });
 
 thanks.addEventListener("click", () => {
-  //createThanks
+  createThanks()
 });
