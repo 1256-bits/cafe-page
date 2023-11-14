@@ -10,3 +10,11 @@ const thanks = document.getElementById("thanks");
 about.addEventListener("click", () => {
   main.appendChild(createAboutTab());
 });
+
+testimonials.addEventListener("click", () => {
+  //createTestimonials()
+});
+
+thanks.addEventListener("click", () => {
+  //createThanks
+});
