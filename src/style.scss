@@ -1,7 +1,7 @@
 @use "styles/colors.scss" as *;
 @use "styles/font-classes.scss";
 @use "styles/header.scss";
-@use "styles/about.scss";
+@use "styles/main.scss";
 @import url(https://fonts.bunny.net/css?family=playfair-display:400,400i,500,500i,600,600i,700,700i|source-sans-pro:400,400i,600,600i,700,700i);
 
 :root {
@@ -52,4 +52,18 @@ li {
 .main {
   padding-block: 1rem;
   margin: auto;
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2;
+  li {
+    list-style: revert;
+  }
+}
+
+a:visited {
+  color: var(--accent);
 }
