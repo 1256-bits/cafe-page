@@ -16,10 +16,10 @@ about.addEventListener("click", () => {
 
 testimonials.addEventListener("click", () => {
   if (main.lastElementChild) main.removeChild(main.lastElementChild);
-  createTestimonials();
+  main.appendChild(createTestimonials());
 });
 
 thanks.addEventListener("click", () => {
   if (main.lastElementChild) main.removeChild(main.lastElementChild);
-  createThanks();
+  main.appendChild(createThanks());
 });
