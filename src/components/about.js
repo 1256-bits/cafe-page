@@ -1,16 +1,16 @@
 export default function createHomePage() {
-  const tab = document.createElement("div"); //return value
+  const tab = document.createElement("div");
+  const h2 = document.createElement("h2");
   tab.classList.add("tab");
-  const h2 = document.createElement("h2"); //main header
   h2.classList.add("center");
   h2.innerText = "Welcome to Real Human cafe";
 
-  //address section
-  const addrSec = document.createElement("section");
-  const addrH3 = document.createElement("h3");
-  const addrP = document.createElement("h3");
-
-  tab.append(h2, createAboutSection(), createScheduleSection());
+  tab.append(
+    h2,
+    createAboutSection(),
+    createScheduleSection(),
+    createAddrSection(),
+  );
   return tab;
 }
 
@@ -84,5 +84,17 @@ function createScheduleSection() {
     ul.appendChild(li);
   }
   section.append(h3, ul);
+  return section;
+}
+
+function createAddrSection() {
+  const section = document.createElement("section");
+  const h3 = document.createElement("h3");
+  const p = document.createElement("p");
+  section.classList.add("section", "address", "center");
+  h3.classList.add("center");
+  h3.innerText = "Our address:";
+  p.innerText = "12 Meow Street, Cat City, Republic of Sealand";
+  section.append(h3, p);
   return section;
 }
