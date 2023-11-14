@@ -20,4 +20,9 @@
   color: inherit;
   font-weight: inherit;
   cursor: pointer;
+  text-shadow:
+    -1px -1px 1px var(--primary),
+    1px 1px 1px var(--primary),
+    -1px 1px 0 var(--primary),
+    1px -1px 0px var(--primary);
 }
