@@ -8,6 +8,7 @@ module.exports = merge(common, {
     open: true,
     host: "localhost",
     static: "./src",
+    hot: true,
   },
   module: {
     rules: [
