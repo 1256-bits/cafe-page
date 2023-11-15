@@ -1,0 +1,9 @@
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2;
+  li {
+    list-style: revert;
+  }
+}
