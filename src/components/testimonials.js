@@ -1,16 +1,19 @@
+import catPic1 from "../cat-pic-1.png";
+import catPic2 from "../cat-pic-2.png";
+import catPic3 from "../cat-pic-3.png";
 export default function createTestimonials() {
   const reviews = [
     {
-      pic: "./cat-pic-1.png",
+      pic: catPic1,
       message:
         "This is a nice caffee for humans.I will recommend it to my friends.",
     },
     {
-      pic: "./cat-pic-2.png",
+      pic: catPic2,
       message: "This cafe is great! I like the foodm especially the fishes.",
     },
     {
-      pic: "./cat-pic-3.png",
+      pic: catPic3,
       message: "Meow",
     },
   ];
