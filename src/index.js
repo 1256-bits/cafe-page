@@ -23,3 +23,5 @@ thanks.addEventListener("click", () => {
   if (main.lastElementChild) main.removeChild(main.lastElementChild);
   main.appendChild(createThanks());
 });
+
+main.appendChild(createAboutTab());
