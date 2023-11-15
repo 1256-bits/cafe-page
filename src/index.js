@@ -1,8 +1,6 @@
 import "normalize.css";
 import "./style.scss"; // import after normalize.css to prevent overwriting
 import createAboutTab from "./components/about.js";
-import createTestimonials from "./components/testimonials.js";
-import createThanks from "./components/thanks.js";
 
 const main = document.querySelector("main");
 const about = document.getElementById("about-us");
@@ -14,14 +12,20 @@ about.addEventListener("click", () => {
   main.appendChild(createAboutTab());
 });
 
-testimonials.addEventListener("click", () => {
-  if (main.lastElementChild) main.removeChild(main.lastElementChild);
-  main.appendChild(createTestimonials());
-});
+testimonials.addEventListener("click", lloadTestimonials);
 
-thanks.addEventListener("click", () => {
-  if (main.lastElementChild) main.removeChild(main.lastElementChild);
-  main.appendChild(createThanks());
-});
+thanks.addEventListener("click", lloadThanks);
 
 main.appendChild(createAboutTab());
+
+async function lloadTestimonials() {
+  const module = await import("./components/testimonials.js");
+  if (main.lastElementChild) main.removeChild(main.lastElementChild);
+  main.appendChild(module.default());
+}
+
+async function lloadThanks() {
+  const module = await import("./components/thanks.js");
+  if (main.lastElementChild) main.removeChild(main.lastElementChild);
+  main.appendChild(module.default());
+}
