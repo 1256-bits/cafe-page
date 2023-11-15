@@ -51,6 +51,7 @@ li {
 
 .main {
   padding-block: 1rem;
+  font-size: 1.1rem;
   margin: auto;
 }
 
@@ -67,3 +68,51 @@ li {
 a:visited {
   color: var(--accent);
 }
+
+.testimonials {
+  ul {
+    row-gap: 1rem;
+    grid-template-columns: 1fr 3fr;
+  }
+  li {
+    grid-column: 1/-1;
+    grid-template-columns: subgrid;
+    border-radius: 2rem;
+    padding: 0.5rem;
+  }
+  img {
+    $picsize: 240px;
+    height: $picsize;
+    width: $picsize;
+    border-radius: 100%;
+  }
+  blockquote {
+    margin: 0;
+    margin-left: 0.5rem;
+    position: relative;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  blockquote::before {
+    content: '\201C';
+    font-size: 2rem;
+    position: absolute;
+    left: 8px;
+    top: 10px;
+  }
+
+  blockquote::after {
+    content: '\201D';
+    font-size: 2rem;
+    position: absolute;
+    right: 5px;
+    bottom: -2px;
+  }
+
+  blockquote p {
+    margin-inline: 1rem;
+  }
+}
+
